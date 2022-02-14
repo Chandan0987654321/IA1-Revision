@@ -1,0 +1,91 @@
+Breakpoint 1, main () at p2final.c:35
+35    k=input();
+(gdb) s
+input () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value\n");
+(gdb) n
+enter the value
+6     scanf("%d",&x);
+(gdb) n
+45
+7     return x;
+(gdb) n
+9   }
+(gdb) n
+main () at p2final.c:36
+36    o=input();
+(gdb) s
+input () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value\n");
+(gdb) n
+enter the value
+6     scanf("%d",&x);
+(gdb) n
+47
+7     return x;
+(gdb) n
+9   }
+(gdb) n
+main () at p2final.c:37
+37    l=input();
+(gdb) s
+input () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the value\n");
+(gdb) n
+enter the value
+6     scanf("%d",&x);
+(gdb) n
+78
+7     return x;
+(gdb) n
+9   }
+(gdb) n
+main () at p2final.c:38
+38    largest= cmp(k,o,l,largest);
+(gdb) s
+cmp (a=45, b=47, c=78, largest=0) at p2final.c:12
+12    if (a>b && a>c)
+(gdb) n
+17    else if(b>a && b>c)
+(gdb) n
+24       largest = c;
+(gdb) n
+25       return largest;
+(gdb) n
+27  }
+(gdb) n
+main () at p2final.c:39
+39    output(k,o,l,largest);
+(gdb) s
+output (a=45, b=47, c=78, largest=78) at p2final.c:30
+30    printf("the largest number is %d", largest);
+(gdb) n
+31  }
+(gdb) n
+main () at p2final.c:40
+40    return 0;
+(gdb) p k
+$1 = 45
+(gdb) p o
+$2 = 47
+(gdb) p l
+$3 = 78
+(gdb) p largest
+$4 = 78
+(gdb) l
+35    k=input();
+36    o=input();
+37    l=input();
+38    largest= cmp(k,o,l,largest);
+39    output(k,o,l,largest);
+40    return 0;
+41
+42  }
+43
+(gdb) 
