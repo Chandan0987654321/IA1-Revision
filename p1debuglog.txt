@@ -1,48 +1,47 @@
-Breakpoint 1, main () at p1final.c:18
-18  {
+Breakpoint 1, main () at p1final.c:16
+16  {
 (gdb) n
-20    input(&a,&b);
+18    input(&a,&b);
 (gdb) s
-input (a=0x7fffc6ca024c, b=0x7fffc6ca0250) at p1final.c:4
-4     printf("enter the values\n");
+input (a=0x7ffc1d73374c, b=0x7ffc1d733750) at p1final.c:4
+4     printf("enter the values : \n");
 (gdb) n
-enter the values
-5     scanf("%d%d",a,b);
+enter the values : 
+5     scanf("%d %d",a,b);
 (gdb) n
-4
 5
+4
 6   }
 (gdb) n
-main () at p1final.c:21
-21    add(a,b,&sum);
+main () at p1final.c:19
+19    add(a,b,&sum);
 (gdb) s
-add (a=4, b=5, sum=0x7fffc6ca0254) at p1final.c:9
-9     *sum=a+b;
+add (a=5, b=4, sum=0x7ffc1d733754) at p1final.c:9
+9     *sum = a+b;
 (gdb) n
 10  }
 (gdb) n
-main () at p1final.c:22
-22   output(a,b,sum);
+main () at p1final.c:20
+20    output(a,b,sum);
 (gdb) s
-output (a=4, b=5, sum=9) at p1final.c:14
-14    printf("the sum of %d and %d is %d",a,b,sum);
+output (a=5, b=4, sum=9) at p1final.c:13
+13    printf("the sum of %d and %d is  : %d",a,b,sum);
 (gdb) n
-16  }
+14  }
 (gdb) n
-main () at p1final.c:23
-23   return 0;
+main () at p1final.c:21
+21    return 0;
 (gdb) p a
-$1 = 4
+$1 = 5
 (gdb) p b
-$2 = 5
+$2 = 4
 (gdb) p sum
 $3 = 9
 (gdb) l
-18  {
-19    int a,b,sum;
-20    input(&a,&b);
-21    add(a,b,&sum);
-22   output(a,b,sum);
-23   return 0;
-24  }
-(gdb) 
+16  {
+17    int a,b,sum;
+18    input(&a,&b);
+19    add(a,b,&sum);
+20    output(a,b,sum);
+21    return 0;
+22  }(gdb) 
